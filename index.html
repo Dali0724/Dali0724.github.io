@@ -1,52 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-　　<title> 首页导航 </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>开始使用layui</title>
+  <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
+  <script src="https://www.layuicdn.com/layui/layui.js"></script>
 </head>
 <body>
-　　<div>
-    
-<a href='https://dh.woshipm.com/#section-1'><h2>自媒体运营导航</h2></a>
-
-    
-  </div>
-  
-  <div>
-    
-<a href='https://wordart.com/'><h2>文字云</h2></a>
-    
-  </div>
-  
-    <div>
  
-<a href='http://www.officeplus.cn/Template/Home.shtml'>   <h2>office官方的模版网站</h2></a>
-    
-  </div>
-  
-    <div>
-    
-<a href='http://www.iconfont.cn/'><h2>阿里巴巴图标素材库</h2></a>
-    
-  </div>
-  
-    <div>
-    
-<a href='http://ppt.sotary.com/web/wxapp/index.html'><h2>PPT 超级市场</h2></a>
-    
-  </div>
-  
-    <div>
-    
-<a href='https://cn.office-converter.com/'><h2>文件转换</h2></a>
-    
-  </div>
-   <button id='btn' >点击前往极乐世界！</button>
-  <div id='demo'>
+ <div class="layui-container">  
+
+   
+
+  <div class="layui-row  layui-bg-red ">
+    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12  " >
+      轮询图
+    </div>
+    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12" >
+      
+
+	     <div class="layui-col-md2"  style="background-color: #F0F0F0;">
+            侧边栏<br/>
+			<br/>
+			<br/><br/>
+			树<br/>
+			<br/>
+			形<br/>
+			<br/>
+			导<br/><br/><br/>
+			<br/>
+			航
+         </div>
+		  
+         <div class="layui-col-md8 " >
+
+
+
+          <a href="https://dh.woshipm.com/#section-1" class="layui-btn layui-anim layui-anim-up">自媒体运营导航</a>
+		  <a href="https://wordart.com/" class="layui-btn layui-anim layui-anim-up">文字云</a>
+		  <br/>
+		  <hr>
+		  <a href="http://www.officeplus.cn/Template/Home.shtml" class="layui-btn layui-anim layui-anim-up" style="background-color: #FFB800;" >office官方的模版网站</a>
+		  <a href="http://www.iconfont.cn/" class="layui-btn layui-anim layui-anim-up" style="background-color: #FFB800;" >阿里巴巴图标素材库</a>
+		  <br/>
+		  <hr>
+		  <a href="https://cn.office-converter.com/" class="layui-btn layui-anim layui-anim-up">文件转换</a>
+		  <a href="http://ppt.sotary.com/web/wxapp/index.html" class="layui-btn layui-anim layui-anim-up">PPT 超级市场</a>
+		  
+		  <br/>
+		  <hr>
+		  <a id='btn' href="http://www.layui.com" class="layui-btn layui-anim layui-anim-up" style="background-color: #FFB800;" >点击前往极乐世界</a>
+		  <a href="https://www.boyunso.com/" class="layui-btn layui-anim layui-anim-up" style="background-color: #FFB800;"  ><i class="layui-icon layui-icon-heart"></i>小说云搜（超牛杯）</a>
+		  
+         </div>
+		 
+
+      
+
+	  
+	  
+    </div>
 
   </div>
-  
-  <script>
+</div>
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+<!-- 你的HTML代码 -->
+<script type="text/javascript">
+    layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element'], function() {
+      var laydate = layui.laydate //日期
+      ,laypage = layui.laypage //分页
+      ,layer = layui.layer //弹层
+      ,table = layui.table //表格
+      ,carousel = layui.carousel //轮播
+      ,upload = layui.upload //上传
+      ,element = layui.element; //元素操作 等等...
+
+      /*layer弹出一个示例*/
+      layer.msg('Hello World');
+    });
+    </script>
+	
+	<script>
       var btn = document.getElementById("btn");
 
         // 第一种 通过点击事件
@@ -64,14 +106,6 @@
             }
             
         }
-      
-function myFunction2()
-{
-    document.getElementById("demo").innerHTML="<a href='https://www.riu5.com/index/home.html'> gg</a>";
-}
-
-
-</script>
-  
+	</script>
 </body>
 </html>
