@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>开始使用layui</title>
+  <title>神器导航</title>
   <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js"></script>
   <script src="https://www.layuicdn.com/layui/layui.js"></script>
 </head>
 <body>
@@ -17,64 +18,109 @@
     <div class="layui-col-xs12 layui-col-sm12 layui-col-md12   " >
       
 	  <div class="layui-card">
-		<div class="layui-card-header">
-			还没想好名字！！！
+		<div  class="layui-card-header">
+		
+			<h7 id="device-type"></h7>
 		</div>
-		<div class="layui-card-body">
-			<ul class="layui-nav" lay-filter="">
-				<li class="layui-nav-item layui-this"><a href="">工具类</a></li>
-				<li class="layui-nav-item "><a href="">娱乐类</a></li>
-				<li class="layui-nav-item"><a href="">提升效率类</a></li>
-				<li class="layui-nav-item">
-					<a href="javascript:;">丧心病狂类</a>
-					<dl class="layui-nav-child"> <!-- 二级菜单 -->
-					<dd><a href="">1</a></dd>
-					<dd><a href="">2</a></dd>
-					<dd><a href="">3</a></dd>
-					</dl>
-				</li>
-				<li class="layui-nav-item"><a href="">联系我</a></li>
+		
+		<div class="layui-tab">
+		
+			<ul class="layui-tab-title">
+				<li class="layui-this">文件处理类网站</li>
+				<li>资源类网站</li>
+				<li>影音下载类网站</li>
+				<li>设计类网站</li>
+				<li>搜索类网站</li>
+				<li>程序员天堂</li>
+				<li>好用软件（牛皮）</li>
 			</ul>
+		<div class="layui-tab-content">
+			<div class="layui-tab-item layui-show">内容1</div>
+			<div class="layui-tab-item">内容2</div>
+			<div class="layui-tab-item">内容3</div>
+			<div class="layui-tab-item">内容4</div>
+			<div class="layui-tab-item">内容5</div>
+			<div class="layui-tab-item">内容6</div>
 		</div>
+</div>
+		
+		
+		
+		
+		
         </div>
     </div>
-    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12" >
+    <div class="layui-col-xs12 layui-col-sm12 layui-col-md12 " >
       
 
-	     <div class="layui-col-md2"  style="background-color: #F0F0F0; font-family:black;">
-            <br/>
-			<br/>
-			<br/><br/>
-			树<br/>
-			<br/>
-			形<br/>
-			<br/>
-			导<br/><br/><br/>
-			<br/>
-			航
+	     <div id="left-side-navBar" class="layui-col-md3 "  style=" font-family:black; ">
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+				<!-- 侧边导航: <ul class="layui-nav layui-nav-tree layui-nav-side"> -->
+				<li class="layui-nav-item layui-nav-itemed">
+					<a href="javascript:;">默认展开</a>
+					<dl class="layui-nav-child">
+						<dd><a href="javascript:;">选项1</a></dd>
+						<dd><a href="javascript:;">选项2</a></dd>
+						<dd><a href="">跳转</a></dd>
+					</dl>
+				</li>
+				<li class="layui-nav-item">
+					<a href="javascript:;">解决方案</a>
+					<dl class="layui-nav-child">
+						<dd><a href="">移动模块</a></dd>
+						<dd><a href="">后台模版</a></dd>
+						<dd><a href="">电商平台</a></dd>
+					</dl>
+				</li>
+				<li class="layui-nav-item"><a href="">产品</a></li>
+				<li class="layui-nav-item"><a href="">大数据</a></li>
+			</ul>
          </div>
-		  
+		  <!-- 右部内容呈现区域-->
          <div class="layui-col-md8 "  >
 
 
 			<div style="margin:0 auto;">
 
 
-          <a href="https://dh.woshipm.com/#section-1" class="layui-btn layui-anim layui-anim-up">自媒体运营导航</a>
-		  <a href="https://wordart.com/" class="layui-btn layui-anim layui-anim-up">文字云</a>
+          <a href="https://dh.woshipm.com/#section-1" class="layui-btn ">自媒体运营导航</a>
+		  <a href="https://wordart.com/" class="layui-btn ">文字云</a>
 		  <br/>
 		  <hr>
-		  <a href="http://www.officeplus.cn/Template/Home.shtml" class="layui-btn layui-anim layui-anim-up" style="background-color: #FFB800;" >office官方的模版网站</a>
-		  <a href="http://www.iconfont.cn/" class="layui-btn layui-anim layui-anim-up" style="background-color: #FFB800;" >阿里巴巴图标素材库</a>
+		  <a href="http://www.officeplus.cn/Template/Home.shtml" class="layui-btn " style="background-color: #FFB800;" >office官方的模版网站</a>
+		  <a href="http://www.iconfont.cn/" class="layui-btn " style="background-color: #FFB800;" >阿里巴巴图标素材库</a>
 		  <br/>
 		  <hr>
-		  <a href="https://cn.office-converter.com/" class="layui-btn layui-anim layui-anim-up">文件转换</a>
-		  <a href="http://ppt.sotary.com/web/wxapp/index.html" class="layui-btn layui-anim layui-anim-up">PPT 超级市场</a>
+		  <a href="https://cn.office-converter.com/" class="layui-btn ">文件转换</a>
+		  <a href="http://ppt.sotary.com/web/wxapp/index.html" class="layui-btn ">PPT 超级市场</a>
 		  
 		  <br/>
 		  <hr>
-		  <a id='btn' href="http://www.layui.com" class="layui-btn layui-anim layui-anim-up" style="background-color: #FFB800;" >点击前往极乐世界</a>
-		  <a href="https://www.boyunso.com/" class="layui-btn layui-anim layui-anim-up" style="background-color: #FFB800;"  ><i class="layui-icon layui-icon-heart"></i>小说云搜（超牛杯）</a>
+		  <a id='btn' href="https://www.kgbook.com/" class="layui-btn " style="background-color: #FFB800;" >[苦瓜树盘]电子书下载</a>
+		  <a href="https://www.boyunso.com/" class="layui-btn " style="background-color: #FFB800;"  ><i class="layui-icon layui-icon-heart"></i>小说云搜（超牛杯）</a>
+		  
+		  
+		  <br/>
+		  <hr>
+		  <a href="https://cn.office-converter.com/" class="layui-btn ">文件转换</a>
+		  <a href="http://ppt.sotary.com/web/wxapp/index.html" class="layui-btn ">PPT 超级市场</a>
+		  
+		  <br/>
+		  <hr>
+		  <a id='btn' href="http://www.layui.com" class="layui-btn " style="background-color: #FFB800;" >点击前往极乐世界</a>
+		  <a href="https://www.boyunso.com/" class="layui-btn " style="background-color: #FFB800;"  ><i class="layui-icon layui-icon-heart"></i>小说云搜（超牛杯）</a>
+		  
+		  
+		  
+
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
 		  
            </div>
 		 
@@ -112,7 +158,16 @@
     </script>
 	
 	<script>
-      var btn = document.getElementById("btn");
+      
+		
+		
+		
+		(function(){
+
+		//按钮添加动画
+		$(".layui-btn").addClass('layui-anim layui-anim-scale');
+		
+		var btn = document.getElementById("btn");
 
         // 第一种 通过点击事件
         btn.onclick = function(){
@@ -129,6 +184,72 @@
             }
             
         }
+		
+		
+		
+		function browserRedirect() 
+		{
+		//获取设备类型 安卓/ios/win
+		var dv_type = document.getElementById("device-type")
+　　		var sUserAgent = navigator.userAgent.toLowerCase();
+　　		var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+　　		var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+　　		var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+　　		var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+　　		var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+　　		var bIsAndroid = sUserAgent.match(/android/i) == "android";
+　　		var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+　　		var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+　　	if ((bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsCE || bIsWM) )
+			{
+　　　　	//window.location.href="http://m.xxx.com/";
+			dv_type.innerHTML = "移动设备访问";
+			$("#left-side-navBar").attr("style","display:none;");
+			//alert("移动设备");
+			} else if(bIsAndroid != "" &  bIsAndroid != null & bIsAndroid) 
+			{
+				dv_type.innerHTML = "安卓设备访问";
+				$("#left-side-navBar").attr("style","display:none;");
+			}else
+			{
+			dv_type.innerHTML = "桌面设备访问";
+			
+			}
+			
+
+			
+			　　　
+		}
+		browserRedirect();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		}());
+
+
+
+
+
+
+
+
+
+
+
 	</script>
 </body>
 </html>
