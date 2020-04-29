@@ -107,10 +107,10 @@
 		  
 		  <br/>
 		  <hr>
-		  <a id='btn' class="layui-btn " style="background-color: #FFB800;" >点击前往极乐世界</a>
+		  <button type="button" id="go-btn" class="layui-btn layui-btn-radius layui-btn-primary">一键地狱模式</button>
 		  <a href="https://www.boyunso.com/" class="layui-btn " style="background-color: #FFB800;"  ><i class="layui-icon layui-icon-heart"></i>小说云搜（超牛杯）</a>
 		  
-		  
+
 		  
 
 		  
@@ -153,7 +153,7 @@
       ,element = layui.element; //元素操作 等等...
 
       /*layer弹出一个示例*/
-      layer.msg('欢迎访问 李大力的站点 欢迎收藏嗷');
+      layer.msg('欢迎访问大力的站点！');
     });
     </script>
 	
@@ -166,12 +166,13 @@
 
 		//按钮添加动画
 		$(".layui-btn").addClass('layui-anim layui-anim-scale');
-		
-		var btn = document.getElementById("btn");
+	
+		var btn = document.getElementById("go-btn");
 
         // 第一种 通过点击事件
         btn.onclick = function(){
-            var a=prompt("派大星多高？","")
+            var a=prompt("派大星多高？","");
+			
                  if(a == 'qwer')
             {
            
@@ -179,8 +180,8 @@
                
             }else
             {
-             alert("回答错误，不许通行！");
-             location.replace('https://www.baidu.com/s?wd=%E7%BE%8E%E5%9B%BD2%E7%94%B7%E5%AD%90%E5%96%9D%E6%B6%88%E6%AF%92%E5%89%82%E6%8A%97%E7%96%AB%E8%A2%AB%E9%80%81%E5%8C%BB')
+             alert("回答错误，查查吧！");
+             window.open('http://www.baidu.com/','_blank')
             }
             
         }
