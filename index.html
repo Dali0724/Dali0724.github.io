@@ -25,17 +25,25 @@
 		   	<!-- 图片轮播-->
 			<div class="layui-carousel" id="test1">
 				<div carousel-item>
-					<div>
-						<img src="bg-1.jpg"  alt="" />
+					<div id="bg-1" class="layui-bg-red">
+						
+						<img src="bg-1.jpg"  alt=""  />
+						<h2 style="text-align:center; margin:20% auto; " >莫言山深，无寻山中人。雾里花影残艳，落淡素颜。</h2>
 					</div>
-					<div>
-						<img src="bg-2.jpg"  alt="" />
+					<div id="bg-2" class="layui-bg-orange">
+						
+						<img src="bg-2.jpg"  alt=""style="width: auto; height: auto;" />
+						<h2 style="text-align:center; margin:20% auto;">人道海水深，不抵相思半。海水尚有涯，相思渺无畔。</h2>
 					</div>
-					<div>
-						<img src="bg-3.jpg"  alt="" />
+					<div id="bg-3" class="layui-bg-green">
+						
+						<img src="bg-3.jpg"  alt="" style="width: auto; height: auto;" />
+						<h2 style="text-align:center; margin:20% auto;">尘世之杂乱，终可洒脱释然，岂非你我之幸。</h2>
 					</div>
-					<div>
-						<img src="bg-4.jpg"  alt="" />
+					<div id="bg-4" class="layui-bg-blue"> 
+						
+						<img src="bg-4.jpg"  alt="" style="width: auto; height: auto;" />
+						<h2 style="text-align:center; margin:20% auto;">长安楼里，我数细雨，煮红尘一樽以念卿。</h2>
 					</div>
 
 				</div>
@@ -76,14 +84,6 @@
 						</tr>
 				</tbody>
 			</table>
- 
-				<table class="layui-table" lay-skin="row">
-				列边框表格（内部结构参见右侧目录“常规用法”）
-				</table>
- 
-				<table class="layui-table" lay-even lay-skin="nob">
-				无边框表格（内部结构参见右侧目录“常规用法”）
-				</table>
 			
 			</div>
 			<div class="layui-tab-item">内容2</div>
@@ -198,6 +198,9 @@
  
 <!-- 你的HTML代码 -->
 <script type="text/javascript">
+
+	var clientWidth = document.body.clientWidth / 4;
+	//alert(clientWidth);
     layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element'], function() {
       var laydate = layui.laydate //日期
       ,laypage = layui.laypage //分页
@@ -214,6 +217,7 @@
 				,width: '100%' //设置容器宽度
 				,arrow: 'always' //始终显示箭头
 				,autoplay: 'true'
+				//,height: clientWidth
 				//,anim: 'updown' //切换动画方式
 					});
     });
@@ -267,11 +271,13 @@
 			{
 　　　　	//window.location.href="http://m.xxx.com/";
 			dv_type.innerHTML = " <i class='layui-icon layui-icon-cellphone'></i>移动设备访问";
+			//$('img').remove();
 			$("#left-side-navBar").attr("style","display:none;");
 			//alert("移动设备");
 			} else if(bIsAndroid != "" &  bIsAndroid != null & bIsAndroid) 
 			{
 				dv_type.innerHTML = " <i class='layui-icon layui-icon-android'></i> 安卓设备访问";
+				//$('img').remove();
 				$("#left-side-navBar").attr("style","display:none;");
 			}else
 			{
