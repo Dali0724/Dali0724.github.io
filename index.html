@@ -12,9 +12,9 @@
  
  <div class="layui-container">  
 
-   
 
-  <div class="layui-row   ">
+
+  <div class="layui-row">
     <div class="layui-col-xs12 layui-col-sm12 layui-col-md12   " >
       
 	  <div class="layui-card">
@@ -22,6 +22,24 @@
 		
 			<h7 id="device-type"></h7>
 		</div>
+		   	<!-- 图片轮播-->
+			<div class="layui-carousel" id="test1">
+				<div carousel-item>
+					<div>
+						<img src="bg-1.jpg"  alt="" />
+					</div>
+					<div>
+						<img src="bg-2.jpg"  alt="" />
+					</div>
+					<div>
+						<img src="bg-3.jpg"  alt="" />
+					</div>
+					<div>
+						<img src="bg-4.jpg"  alt="" />
+					</div>
+
+				</div>
+			</div>
 		
 		<div class="layui-tab">
 		
@@ -35,7 +53,39 @@
 				<li> <i class="layui-icon layui-icon-component"></i>好用软件（牛皮）</li>
 			</ul>
 		<div class="layui-tab-content">
-			<div class="layui-tab-item layui-show">内容1</div>
+			<div class="layui-tab-item layui-show">
+				<table class="layui-table" lay-skin="row">
+
+					<thead>
+						<tr>
+							<th>文件类型转换</th>
+							<th>文件压缩</th>
+							<th>签名</th>
+						</tr> 
+					</thead>
+				<tbody>
+						<tr>
+							<td>贤心</td>
+							<td>2016-11-29</td>
+							<td>人生就像是一场修行</td>
+						</tr>
+						<tr>
+							<td>许闲心</td>
+							<td>2016-11-28</td>
+							<td>于千万人之中遇见你所遇见的人，	</td>
+						</tr>
+				</tbody>
+			</table>
+ 
+				<table class="layui-table" lay-skin="row">
+				列边框表格（内部结构参见右侧目录“常规用法”）
+				</table>
+ 
+				<table class="layui-table" lay-even lay-skin="nob">
+				无边框表格（内部结构参见右侧目录“常规用法”）
+				</table>
+			
+			</div>
 			<div class="layui-tab-item">内容2</div>
 			<div class="layui-tab-item">内容3</div>
 			<div class="layui-tab-item">内容4</div>
@@ -50,6 +100,12 @@
 		
         </div>
     </div>
+	
+	
+
+	
+	
+	<!-- 下部分-->
     <div class="layui-col-xs12 layui-col-sm12 layui-col-md12 " >
       
 
@@ -78,9 +134,6 @@
          </div>
 		  <!-- 右部内容呈现区域-->
          <div class="layui-col-md8 "  >
-
-
-			<div style="margin:0 auto;">
 
 
           <a href="https://dh.woshipm.com/#section-1" class="layui-btn ">自媒体运营导航</a>
@@ -121,15 +174,17 @@
 		  
 		  
 		  
-		  
-           </div>
+		
 		 
 			</div>
       
-
-	  
 	  
     </div>
+
+	
+	
+	
+	<!--  时间线-->
 
   </div>
 </div>
@@ -154,6 +209,13 @@
 
       /*layer弹出一个示例*/
       layer.msg('欢迎访问大力的站点！');
+	  carousel.render({
+				elem: '#test1'
+				,width: '100%' //设置容器宽度
+				,arrow: 'always' //始终显示箭头
+				,autoplay: 'true'
+				//,anim: 'updown' //切换动画方式
+					});
     });
     </script>
 	
@@ -204,12 +266,12 @@
 　　	if ((bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsCE || bIsWM) )
 			{
 　　　　	//window.location.href="http://m.xxx.com/";
-			dv_type.innerHTML = "移动设备访问";
+			dv_type.innerHTML = " <i class='layui-icon layui-icon-cellphone'></i>移动设备访问";
 			$("#left-side-navBar").attr("style","display:none;");
 			//alert("移动设备");
 			} else if(bIsAndroid != "" &  bIsAndroid != null & bIsAndroid) 
 			{
-				dv_type.innerHTML = "安卓设备访问";
+				dv_type.innerHTML = " <i class='layui-icon layui-icon-android'></i> 安卓设备访问";
 				$("#left-side-navBar").attr("style","display:none;");
 			}else
 			{
