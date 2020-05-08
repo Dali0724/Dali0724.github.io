@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>神器导航</title>
+  <title>开水导航</title>
   <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
   <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.0/jquery.js"></script>
   <script src="https://www.layuicdn.com/layui/layui.js"></script>
@@ -20,7 +20,7 @@
 	  <div class="layui-card">
 		<div  class="layui-card-header">
 		
-			<h7 id="device-type"></h7>
+			<h6 id="device-type"></h6>
 		</div>
 		   	<!-- 图片轮播-->
 			<div class="layui-carousel" id="test1">
@@ -86,7 +86,46 @@
 			</table>
 			
 			</div>
-			<div class="layui-tab-item">内容2</div>
+			<div class="layui-tab-item">
+								<table class="layui-table" lay-skin="row">
+
+					<thead>
+						<tr>
+							<th>图片下载</th>
+							<th>文件压缩</th>
+							<th>签名</th>
+						
+						</tr> 
+					</thead>
+				<tbody>
+						<tr>
+							<td><a href="http://pngimg.com/" target="_blank"> pngimg.com</a></td>
+							<td> ss</td>
+							
+							<td><a href="https://undraw.co/illustrations" target="_blank" rel="noopener noreferrer">unDraw</a></td>
+						</tr>
+						<tr>
+							<td><a href="https://www.cossyimages.com/" target="_blank" rel="noopener noreferrer">freePNGs</a></td>
+							<td>2016-11-28</td>
+							<td>于千万人之中遇见你所遇见的人，	</td>
+							
+						</tr>
+						<tr>
+							<td><a href="http://www.pngmart.com/" target="_blank" rel="noopener noreferrer">PNGmart</a></td>
+							<td>2016-11-28</td>
+							<td>于千万人之中遇见你所遇见的人，	</td>
+							
+						</tr>
+						
+						<tr>
+							<td><a href="freePhotoDownload.html" type="button" class="layui-btn">免费高清图库</a></td>
+							<td><a href="freePhotoDownload.html" >2016-11-28 </a></td>
+							<td>于千万人之中遇见你所遇见的人，	</td>
+							
+						</tr>
+				</tbody>
+			</table>
+			</div>
 			<div class="layui-tab-item">内容3</div>
 			<div class="layui-tab-item">内容4</div>
 			<div class="layui-tab-item">内容5</div>
@@ -210,8 +249,8 @@
       ,upload = layui.upload //上传
       ,element = layui.element; //元素操作 等等...
 
-      /*layer弹出一个示例*/
-      layer.msg('欢迎访问大力的站点！');
+      /*layer弹出一个示例
+      layer.msg('欢迎访问大力的站点！');*/
 	  carousel.render({
 				elem: '#test1'
 				,width: '100%' //设置容器宽度
@@ -220,15 +259,43 @@
 				//,height: clientWidth
 				//,anim: 'updown' //切换动画方式
 					});
+					
+					
+	layer.open({
+        type: 1
+        ,title: false //不显示标题栏
+        ,closeBtn: false
+        ,area: '300px;'
+        ,shade: 0.8
+        ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+        ,btn: ['OK我知道了', '你管不着']
+        ,btnAlign: 'c'
+        ,moveType: 1 //拖拽模式，0或者1
+        ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">欢迎访问开水导航！<br>在这里你会发现海量神级网站<br>工作、学习、考试、娱乐包罗万象 并且不断更新哦<br><br ><h2 style="color:#EA2901;font-family:verdana;font-style:oblique;">赶紧收藏起来吧!</h2><br></div>'
+        ,success: function(layero){
+          var btn = layero.find('.layui-layer-btn');
+          btn.find('.layui-layer-btn0').attr({
+            href: 'http://www.layui.com/'
+            ,target: '_blank'
+          });
+        }
+       });
     });
+	
+	
+	
+	
+
     </script>
 	
 	<script>
       
-		
+			
 		
 		
 		(function(){
+		
+		
 
 		//按钮添加动画
 		$(".layui-btn").addClass('layui-anim layui-anim-scale');
