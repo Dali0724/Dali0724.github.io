@@ -7,10 +7,35 @@
 <body>
 
 <h1>复制代码</h1>
-<p></p>
+<font color="red" >如不能自动复制 <strong>请手动复制</strong></font>
+</br>
+</br>
+</br>
 
 	
-	<input id="demoInput" value="hello world">
+
+	
+<textarea id="demoInput" rows="10" cols="70">
+
+var topWin = window.top.document.getElementById("mainCont").contentWindow;
+
+var player = topWin[0].jwplayer("container");
+var total_time = player.getDuration();
+
+var current_time = player.getPosition();
+player.setPlaybackRate(2);
+
+var se = setInterval(function(){current_time = player.getPosition();
+console.log('当前进度: '+current_time+'--总时长：'+total_time);
+if(current_time >= total_time-10){console.log("reset playRate!!!");
+player.setPlaybackRate(1);
+clearInterval(se); }}, 2000);
+
+
+</textarea>
+	
+	
+	
 <button id="btn">点我复制</button>
 	
 	
