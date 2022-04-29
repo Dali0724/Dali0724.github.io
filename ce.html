@@ -6,6 +6,29 @@
 
 <style type="text/css">
 
+
+#animation
+{
+	width:auto;
+	height:200px;
+	background:B0E2FF;
+	animation:myfirst 4s;
+	-webkit-animation:myfirst 4s; /* Safari and Chrome */
+	animation-iteration-count: infinite;
+}
+
+@keyframes myfirst
+{
+	from {background:B0E2FF;}
+	to {background:yellow;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+	from {background:B0E2FF;}
+	to {background:yellow;}
+}
+
 #btn{
 	font-family: "'微软雅黑','Helvetica Neue',Helvetica,Arial,sans-serif";
 	font-size: 15px!important;
@@ -26,9 +49,12 @@
 </style>
 </head>
 <body>
+<div id="animation">
+	<h1>复制代码</h1>
+	<font color="red" >如不能自动复制 <strong>请手动复制</strong></font>
+	代码仅供测试使用，请勿作商业用途！
+</div>
 
-<h1>复制代码</h1>
-<font color="red" >如不能自动复制 <strong>请手动复制</strong></font>
 </br>
 </br>
 </br>
