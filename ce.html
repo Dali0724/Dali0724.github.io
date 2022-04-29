@@ -38,19 +38,16 @@
 	
 <textarea id="demoInput" rows="10" cols="70">
 
-var topWin = window.top.document.getElementById("mainCont").contentWindow;
 
-var player = topWin[0].jwplayer("container");
-var total_time = player.getDuration();
-
-var current_time = player.getPosition();
-player.setPlaybackRate(2);
-
-var se = setInterval(function(){current_time = player.getPosition();
-console.log('当前进度: '+current_time+'--总时长：'+total_time);
+var player = $('video')['0'];
+var total_time = player.duration;
+var current_time = player.currentTime;
+player.playbackRate = 2;
+var se = setInterval(function(){current_time = player.currentTime;
+console.log('currentProgress: '+current_time+'/'+total_time);
 if(current_time >= total_time-10){console.log("reset playRate!!!");
-player.setPlaybackRate(1);
-clearInterval(se); }}, 2000);
+player.playbackRate = 1;
+clearInterval(se); }}, 2500);
 
 
 </textarea>
